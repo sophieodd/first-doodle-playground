@@ -90,6 +90,8 @@ body {
   max-width: 1600px; 
   padding: 2rem 5vw;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
