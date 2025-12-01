@@ -546,9 +546,11 @@ body.light-mode .theme-btn {
   background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
 }
 
-.logo-img {
-  filter: invert(0);
-}
-.light .logo-img {
-  filter: invert(1);
+.sculpture {
+  position: absolute;
+  right: 0;
+  bottom: 0; 
+  pointer-events: none;
+  z-index: -1;
+  width: clamp(80px, 8vw, 120px);
 }
