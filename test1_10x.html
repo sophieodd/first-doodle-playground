@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Christian Muñoz - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cv">
+    <header class="hero">
+      <div class="profile-wrapper">
+        <div class="profile-circle">
+          <img src="Mask Group.svg" alt="Profile Image" class="profile-img">
+        </div>
+      </div>
+      <div class="hero-text">
+        <div class="name-block">
+          <h1><span class="gradient">Christian</span><br>MUÑOZ</h1>
+          <div class="vline"></div>
+          <h1>Product<br><span class="gradient2">Designer</span></h1>
+        </div>
+      </div>
+      <button id="theme-toggle" class="theme-btn">😎</button>
+
+      <script>
+        const toggle = document.getElementById('theme-toggle');
+
+        function updateEmoji() {
+          toggle.textContent = document.body.classList.contains('light-mode') ? '🧛‍♂️' : '🌞';
+        }
+
+        updateEmoji();
+
+        toggle.addEventListener('click', () => {
+          document.body.classList.toggle('light-mode');
+          updateEmoji();
+        });
+      </script>
+    </header>
+
+    <div class="content">
+      <aside class="left">
+        <section>
+          <h3>Personal</h3>
+          <div class="text-group">
+            <div class="row"><h4>Name</h4><p>Cristian David Muñoz Camayo</p></div>
+            <div class="row"><h4>Birthday</h4><p>3 November 2004</p></div>
+            <div class="row"><h4>Nationality</h4><p>Colombian</p></div>
+            <div class="row"><h4>Languages</h4><p>Spanish, English</p></div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Contact</h3>
+          <div class="text-group">
+            <div class="row">
+              <h4>Email</h4>
+              <a href="mailto:hola@soytian.tech" class="email-link">hola@soytian.tech</a>
+            </div>
+            <div class="row"><h4>Website</h4><p><a href="https://www.soytian.tech/" target="_blank">soytian.tech</a></p></div>
+            <div class="row"><h4>LinkedIn</h4><p><a href="https://www.linkedin.com/in/tianmunooz" target="_blank">linkedin.com/in/tianmunooz</a></p></div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Software</h3>
+          <ul class="software-list">
+            <li>
+              <h4 class="program-name">Figma</h4>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 96.7%;"></div>
+              </div>
+            </li>
+            <li>
+              <h4 class="program-name">Adobe Illustrator</h4>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+            <li>
+              <h4 class="program-name">After Effects</h4>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 83.33%;"></div>
+              </div>
+            </li>
+            <li>
+              <h4 class="program-name">Hotjar</h4>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 90.67%;"></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <div class="align-left">
+          <img src="Group 1.svg" alt="logo" class="logo-img">
+          <span class="logo-text">tian</span>
+        </div>
+      </aside>
+
+      <main class="right">
+        <section>
+          <h3>Profile</h3>
+          <p>I am a Product Designer and Frontend Developer. I fully understand the design and development process of digital products. My job is to make products both usable and visually appealing. Through Design Thinking methodology, I create products that resonate with users.</p>
+        </section>
+
+        <section class="skills-circle">
+          <div class="circle-skills">
+            <div class="skill"><div class="circle" data-percent="92"><span>UX</span></div></div>
+            <div class="skill"><div class="circle" data-percent="88"><span>UI</span></div></div>
+            <div class="skill"><div class="circle" data-percent="75"><span>DESIGN</span></div></div>
+            <div class="skill"><div class="circle" data-percent="67"><span>IA</span></div></div>
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              document.querySelectorAll(".circle").forEach(circle => {
+                const percent = circle.dataset.percent;
+                const angle = (percent / 100) * 360;
+                circle.style.setProperty("--target-angle", `${angle}deg`);
+                let start = null;
+                function animate(timestamp) {
+                  if (!start) start = timestamp;
+                  const progress = Math.min((timestamp - start) / 1000, 1);
+                  const currentAngle = progress * angle;
+                  circle.style.setProperty("--value", `${currentAngle}deg`);
+                  if (progress < 1) requestAnimationFrame(animate);
+                }
+                requestAnimationFrame(animate);
+              });
+            });
+          </script>
+        </section>
+
+        <section>
+          <h3>Work</h3>
+          <div class="timeline">
+            <div class="entry">
+              <div class="leaf-wrap">
+                <div class="leaf">
+                  <img src="Vector.svg" alt="">
+                  <span>2022</span>
+                </div>
+              </div>
+              <div class="stick">
+                <div class="dot"></div>
+                <div class="line"></div>
+              </div>
+              <div class="text">
+                <h5>COMMUNITY AMBASSADOR</h5>
+                <h6>PLATZI, COLOMBIA</h6>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="leaf-wrap">
+                <div class="leaf">
+                  <img src="Vector.svg" alt="">
+                  <span>2022</span>
+                </div>
+              </div>
+              <div class="stick">
+                <div class="dot"></div>
+                <div class="line"></div>
+              </div>
+              <div class="text">
+                <h5>PRODUCT DESIGNER</h5>
+                <h6>UPWORK, BUCARAMANGA COLOMBIA</h6>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="leaf-wrap">
+                <div class="leaf">
+                  <img src="Vector.svg" alt="">
+                  <span>2019</span>
+                </div>
+              </div>
+              <div class="stick">
+                <div class="dot"></div>
+                <div class="line"></div>
+              </div>
+              <div class="text">
+                <h5>UX/UI DESIGNER</h5>
+                <h6>FRELANCE BUCARAMANGA, COLOMBIA</h6>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Education</h3>
+          <div class="timeline">
+            <div class="entry">
+              <div class="leaf-wrap">
+                <div class="leaf">
+                  <img src="Vector.svg" alt="">
+                  <span>2022</span>
+                </div>
+              </div>
+              <div class="stick">
+                <div class="dot"></div>
+                <div class="line"></div>
+              </div>
+              <div class="text">
+                <h5>UX Design</h5>
+                <h6>Coursera</h6>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="leaf-wrap">
+                <div class="leaf">
+                  <img src="Vector.svg" alt="">
+                  <span>2021</span>
+                </div>
+              </div>
+              <div class="stick">
+                <div class="dot"></div>
+                <div class="line"></div>
+              </div>
+              <div class="text">
+                <h5>UX/UI DESIGNER - Product Design</h5>
+                <h6>Platzi, Colombia</h6>
+              </div>
+            </div>
+          </div>
+
+          <img src="Escultures.png" alt="Sculptures" class="align-right">
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
