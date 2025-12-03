@@ -205,13 +205,11 @@ p, li, a {
   margin: 0;
 }
 
-
 .name-block .vline {
   width: clamp(16px, 2vw, 26px);
   height: clamp(180px, 25vw, 200px);
   background: var(--border-color);
 }
-
 
 .name-block .gradient {
   background: linear-gradient(90deg, #E0C3FC, #8EC5FC);
@@ -224,8 +222,14 @@ p, li, a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-
+.sculpture {
+  position: absolute;
+  right: 0;
+  bottom: 0; 
+  pointer-events: none;
+  z-index: -1;
+  width: clamp(80px, 8vw, 120px);
+}
 
 .content {
   display: flex;
@@ -450,10 +454,12 @@ section {
   position: relative;
 }
 
-.leaf img {
+.leaf-img {
   width: 100%;
   height: 100%;
   transition: all 0.3s ease;
+  fill:var(--text-color);
+  stroke:var(--text-color);
 }
 
 .leaf span {
@@ -548,6 +554,7 @@ body.light-mode .theme-btn {
   background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
 }
 
+<<<<<<< HEAD
 .sculpture {
   position: absolute;
   right: 0;
@@ -556,3 +563,8 @@ body.light-mode .theme-btn {
   z-index: -1;
   width: clamp(80px, 8vw, 120px);
 }
+=======
+.logo-img {
+  fill:var(--text-color);
+}
+>>>>>>> b3f8f9d (Update)
