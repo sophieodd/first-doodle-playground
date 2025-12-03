@@ -553,8 +553,6 @@ section {
 body.light-mode .theme-btn {
   background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
 }
-
-<<<<<<< HEAD
 .sculpture {
   position: absolute;
   right: 0;
@@ -563,7 +561,6 @@ body.light-mode .theme-btn {
   z-index: -1;
   width: clamp(80px, 8vw, 120px);
 }
-=======
 .logo-img {
   fill:var(--text-color);
 }
